@@ -1,0 +1,13 @@
+# jupyter-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: jupyter-service
+  namespace: jupyter
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8888
+      targetPort: 8888
+  selector:
+    app: jupyter-notebook

@@ -1,0 +1,8 @@
+# spark-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spark-config
+  namespace: jupyter
+data:
+  SPARK_MASTER_URL: "spark://spark-master-0.spark-headless.spark.svc.cluster.local:7077"
